@@ -2,14 +2,75 @@ import { Container } from "./styles";
 import githubIcon from "../../assets/github.svg"
 // import DownloadApp from '../../assets/download.webp'
 import externalLink from "../../assets/external-link.svg"
+import wordpress from "../../assets/wordpress.svg";
+import shopify from "../../assets/shopify.svg";
+import htmlIcon from "../../assets/html-icon.svg";
+import cssIcon from "../../assets/css-icon.svg";
+import jsIcon from "../../assets/js-icon.svg";
+import nodeIcon from "../../assets/node-icon.svg";
+import reactIcon from "../../assets/react-icon.svg";
+import typescriptIcon from "../../assets/typescript-icon.svg";
+import vueIcon from "../../assets/vue-icon.svg";
+import boostrapIcon from "../../assets/bootstrap-icon.svg";
 import ScrollAnimation from "react-animate-on-scroll";
 
-
-export function Project() {
+export function Skills() {
   return (
     <Container id="project">
-      <h2>My Projects</h2>
-      <p style={{ textAlign: "center" }}>Uploading Soon...</p>
+      <h2>Here are my main skills</h2>
+      <div className="hard-skills" style={{justifyContent:'center'}}>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.10 * 1000}>
+              <img src={wordpress} alt="Wordpress" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.12 * 1000}>
+              <img src={shopify} alt="shopify" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.13 * 1000}>
+              <img src={reactIcon} alt="React" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.14 * 1000}>
+              <img src={typescriptIcon} alt="Typescript" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.15 * 1000}>
+              <img src={vueIcon} alt="Vue" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.16 * 1000}>
+              <img src={nodeIcon} alt="Node" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.17 * 1000}>
+              <img src={htmlIcon} alt="Html" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.18 * 1000}>
+              <img src={cssIcon} alt="Css" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.19 * 1000}>
+              <img src={boostrapIcon} alt="bootstrap" />
+            </ScrollAnimation>
+          </div>
+          <div className="hability">
+            <ScrollAnimation animateIn="fadeInUp" delay={0.19 * 1000}>
+              <img src={jsIcon} alt="JavaScript" />
+            </ScrollAnimation>
+          </div>
+        </div>
+     
 
       <div className="projects">
 
