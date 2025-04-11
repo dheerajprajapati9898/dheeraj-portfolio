@@ -13,6 +13,7 @@ export function Hero() {
   return (
     <Container id="home">
       <div className="hero-text">
+      {/* animateIn="fadeInUp" */}
         <ScrollAnimation animateIn="fadeInUp">
           <p>Hello <img src={Hello} alt="Hello" width="20px"/>, I'm <br/> <br/> var name = </p>
         </ScrollAnimation>
