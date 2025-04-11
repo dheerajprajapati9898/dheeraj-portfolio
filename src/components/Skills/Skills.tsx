@@ -9,26 +9,80 @@ import cssIcon from "../../assets/css-icon.svg";
 import jsIcon from "../../assets/js-icon.svg";
 import nodeIcon from "../../assets/node-icon.svg";
 import reactIcon from "../../assets/react-icon.svg";
-import typescriptIcon from "../../assets/typescript-icon.svg";
+import typescriptIcon from "../../assets/typescript-svgrepo-com.svg";
+import javascriptIcon from "../../assets/javascript-svgrepo-com.svg";
+import flutterIcon from "../../assets/flutter-svgrepo-com.svg";
+import xcodeIcon from "../../assets/xcode-svgrepo-com.svg";
+
 import vueIcon from "../../assets/vue-icon.svg";
 import boostrapIcon from "../../assets/bootstrap-icon.svg";
 import ScrollAnimation from "react-animate-on-scroll";
+import Card from "./Card";
 
 export function Skills() {
+  const projects = [
+    {
+      title: "React Native",
+      description:
+        "React Native brings the best parts of developing with React to native development. It's a best-in-class JavaScript library for building user interfaces.",
+      techStack: ['React Native', 'Apps'],
+      githubUrl: "https://reactnative.dev/",
+      // externalUrl: "https://ai-chatbot-t8fn.onrender.com",
+      firstimage: reactIcon,
+      secondimage:null
+
+    },
+    {
+      title: 'TypeScript & JavaScript',
+      description:
+        'TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.\n',
+      techStack: ['TypeScript', 'JavaScript'],
+      githubUrl: 'https://www.typescriptlang.org/',
+      externalUrl:
+        'https://www.javascript.com/',
+        firstimage:typescriptIcon,
+        secondimage:javascriptIcon
+    },
+    {
+      title: 'Flutter',
+      description:
+        'Flutter transforms the development process. Build, test, and deploy beautiful mobile, web, desktop, and embedded experiences from a single codebase.',
+      techStack: ['Flutter', 'Apps', 'Games'],
+      githubUrl:
+        'https://github.com/CodeVinayak/MediBook-Medical-Appointment-Scheduler-with-Health-History',
+      // externalUrl: 'https://medibook.vinayaksingh.com',
+      firstimage: flutterIcon,
+      secondimage:null
+
+
+    },
+    // {
+    //   title: 'Real-Time Hand Gesture-Driven 3D Object Manipulation',
+    //   description:
+    //     'Developed real-time gesture recognition system using OpenCV, MediaPipe & scikit-learn. Achieved 95.2% accuracy for intuitive 3D object control.',
+    //   techStack: ['OpenCV', 'MediaPipe', 'scikit-learn'],
+    //   githubUrl:
+    //     'https://github.com/CodeVinayak/Real-Time-Hand-Gesture-Driven-3D-Object-Manipulation',
+    //   // externalUrl: 'https://youtu.be/NOm-3MynPLE',
+    //   firstimage:xcodeIcon
+    // },
+    // {
+    //   title: 'VeloCityAI',
+    //   description:
+    //     "A website that allows users to get instant answers and generate stunning AI pictures using GPT-3 and DALL-E.",
+
+    //   techStack: ['React', 'Typescript', 'Html', 'css'],
+    //   githubUrl:
+    //     'https://github.com/CodeVinayak/Real-Time-Hand-Gesture-Driven-3D-Object-Manipulation',
+    //   // externalUrl: 'https://velocityai.vinayaksingh.com/',
+    // },
+  ];
   return (
-    <Container id="project">
+    <Container id="skills">
       <h2>Here are my main skills</h2>
-      <div className="hard-skills" style={{justifyContent:'center'}}>
-          <div className="hability">
-            <ScrollAnimation animateIn="fadeInUp" delay={0.10 * 1000}>
-              <img src={wordpress} alt="Wordpress" />
-            </ScrollAnimation>
-          </div>
-          <div className="hability">
-            <ScrollAnimation animateIn="fadeInUp" delay={0.12 * 1000}>
-              <img src={shopify} alt="shopify" />
-            </ScrollAnimation>
-          </div>
+      {/* <div className="hard-skills" style={{justifyContent:'center'}}> */}
+      <div className="projects">
+          {/* 
           <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" delay={0.13 * 1000}>
               <img src={reactIcon} alt="React" />
@@ -39,16 +93,7 @@ export function Skills() {
               <img src={typescriptIcon} alt="Typescript" />
             </ScrollAnimation>
           </div>
-          <div className="hability">
-            <ScrollAnimation animateIn="fadeInUp" delay={0.15 * 1000}>
-              <img src={vueIcon} alt="Vue" />
-            </ScrollAnimation>
-          </div>
-          <div className="hability">
-            <ScrollAnimation animateIn="fadeInUp" delay={0.16 * 1000}>
-              <img src={nodeIcon} alt="Node" />
-            </ScrollAnimation>
-          </div>
+          
           <div className="hability">
             <ScrollAnimation animateIn="fadeInUp" delay={0.17 * 1000}>
               <img src={htmlIcon} alt="Html" />
@@ -68,9 +113,29 @@ export function Skills() {
             <ScrollAnimation animateIn="fadeInUp" delay={0.19 * 1000}>
               <img src={jsIcon} alt="JavaScript" />
             </ScrollAnimation>
-          </div>
+          </div> */}
+          {/* <Card
+        title="Serverless Voting Application for Programming Languages"
+        description="Developed a serverless voting app using React, AWS Lambda, API Gateway, and DynamoDB, enabling users to vote and explore languages interactively with cost-efficient serverless architecture."
+        techStack={['AWS Lambda', 'API Gateway', 'DynamoDB']}
+        githubUrl="https://github.com/CodeVinayak/Serverless-Voting-Application"
+        githubIcon={githubIcon}
+      /> */}
+         {projects.map((project, index) => (
+  <Card
+    key={index}
+    title={project.title}
+    description={project.description}
+    techStack={project.techStack}
+    githubUrl={project.githubUrl}
+    externalUrl={project.externalUrl}
+    firstimage={project.firstimage}
+    secondimage={project.secondimage}
+  />
+))}
+
         </div>
-     
+       
 
       <div className="projects">
 

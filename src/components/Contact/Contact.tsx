@@ -13,6 +13,7 @@ export function Contact(){
         {/* <p>Ready to get started on your project? </p>
         <p>Contact me now for a Free consultation.</p> */}
       </header>
+
       <div
   style={{
     display: 'flex',
@@ -21,6 +22,7 @@ export function Contact(){
     justifyContent: 'center',
     gap: 20,
     alignItems: 'center',
+    marginTop:50
   }}
 >
   <div
