@@ -5,7 +5,7 @@ type CardProps = {
   title: string;
   description: string;
   techStack?: string[];
-  githubUrl?: string;
+  internalUrl?: string;
   externalUrl?: string;
   firstimage?: string;
   secondimage?: string;
@@ -15,7 +15,7 @@ const Card: React.FC<CardProps> = ({
   title,
   description,
   techStack = [],
-  githubUrl,
+  internalUrl,
   externalUrl,
   firstimage,
   secondimage,
@@ -25,8 +25,8 @@ const Card: React.FC<CardProps> = ({
       <div className="project bg-white rounded-2xl shadow-md p-6">
         <header className="flex justify-between items-start mb-4">
           <div className="project-links flex gap-3">
-            {githubUrl && firstimage && (
-              <a href={githubUrl} target="_blank" rel="noreferrer">
+            {internalUrl && firstimage && (
+              <a href={internalUrl} target="_blank" rel="noreferrer">
                 <img src={firstimage} alt="GitHub" className="w-5 h-5" />
               </a>
             )}
